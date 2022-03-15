@@ -21,7 +21,7 @@ body{
     position: relative;
     width: 100%;
     padding: 30px 20px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 30px rgba(15, 2, 2, 0.15);
     border-radius: 10px;
 }
 
@@ -65,7 +65,7 @@ body{
 .types span{
     padding: 5px 20px;
     border-radius: 20px;
-    color: #040e2b;
+    color: #f0f0f3;
 }
 
 .status{

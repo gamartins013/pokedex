@@ -1,6 +1,6 @@
 body {
 	background: #EFEFBB;
-	background: linear-gradient(to right, rgb(197, 230, 236), rgb(222, 60, 236));
+	background: linear-gradient(to right, rgb(197, 230, 236), #95aae9);
 	color: rgb(0, 0, 0);
 	margin: 0;
 	font-family: rubik;

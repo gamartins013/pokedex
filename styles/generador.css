@@ -90,3 +90,23 @@ body{
     border: none;
     border-radius: 5px;
 }
+
+.title{
+	margin-top: 50px;
+	font-size: 42px;
+	position: relative;
+	z-index: 2;
+    align-items: center ;
+    text-align: center ;
+    color:white;
+    
+}
+
+h2{
+    margin-top: 10px;
+	font-size: 22px;
+	position: relative;
+	z-index: 2;
+    align-items: center ;
+    text-align: center ;
+}

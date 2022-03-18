@@ -5,7 +5,7 @@ const typeColor = {
     fairy:"FF0069",
     fighting:"#30336b",
     fire:"f0932b",
-    flying:"8lecec",
+    flying:"F5F5F5",
     grass:"#00b894",
     ground:"#EFB549",
     ghost:"#a55eea",

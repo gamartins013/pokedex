@@ -1,5 +1,3 @@
-
-
 const typeColor = {
     bug:"#26de81",
     dragon:"#ffeaa7",
@@ -52,10 +50,7 @@ let getPokeData = () =>{
         const statSpeed = data.stats[5].base_stat;
 
 
-        // gerando o tema da cor do pokemon
-        const themeColor = typeColor[data.types[0].type.name];
        
-
         card.innerHTML = `
         <p class="hp">
             <span>HP 
@@ -67,7 +62,6 @@ let getPokeData = () =>{
                 ${pokeName}
             </h2>
             <div class="types">
-
             </div>
             <div class="status">
                 <div>
@@ -85,30 +79,27 @@ let getPokeData = () =>{
             </div>
         `;
         appendTypes(data.types);
-        styleCard(themeColor);
 
     };
     
     let appendTypes = (types) => {
+        if (types.length === 2) {
+            console.log("2");
+            card.style.background = `radial-gradient(circle at 50% 0%, ${typeColor[types[1].type.name]}, ${typeColor[types[0].type.name]} 36%, #ffffff 36%)`;
+        }
+        else {
+            console.log("1");
+            card.style.background = `radial-gradient(circle at 50% 0%, ${typeColor[types[0].type.name]}, ${typeColor[types[0].type.name]} 36%, #ffffff 36%)`;
+        }
         types.forEach((item) => {
             let span = document.createElement("SPAN")
             span.textContent = item.type.name;
-            document.querySelector(".types").appendChild(span)
+            document.querySelector(".types").appendChild(span);
+            span.style.backgroundColor = typeColor[item.type.name];
         });
     };
-
-    let styleCard = (color) => {
-        card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
-        card.querySelectorAll(".types span").forEach(typeColor => {
-            typeColor.style.backgroundColor = color;
-        })
-    }
 
 // adicionando evento de click no botão de novo pokemon
 button.addEventListener("click", getPokeData);
 
 window.addEventListener("load", getPokeData);
-
-
-
-

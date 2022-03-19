@@ -1,11 +1,13 @@
+
+
 const typeColor = {
     bug:"#26de81",
     dragon:"#ffeaa7",
-    alectric:"#fed330",
-    fairy:"FF0069",
+    electric:"#fed330",
+    fairy:"#FF0069",
     fighting:"#30336b",
-    fire:"f0932b",
-    flying:"F5F5F5",
+    fire:"#f0932b",
+    flying:"#F5F5F5",
     grass:"#00b894",
     ground:"#EFB549",
     ghost:"#a55eea",
@@ -98,7 +100,7 @@ let getPokeData = () =>{
     let styleCard = (color) => {
         card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
         card.querySelectorAll(".types span").forEach(typeColor => {
-            typeColor.style.backgroundColor = color
+            typeColor.style.backgroundColor = color;
         })
     }
 
